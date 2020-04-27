@@ -1437,8 +1437,8 @@ MonoBehaviour:
   sceneName: CuratorMode
   theSaveLoad: {fileID: 0}
   myText: {fileID: 1698542038}
-  idText: {fileID: 1559840067}
-  pwText: {fileID: 1726085318}
+  idText: {fileID: 212422880}
+  pwText: {fileID: 239035856}
 --- !u!1 &654135654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,8 +2421,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1236828156}
   m_TextComponent: {fileID: 239035856}
   m_Placeholder: {fileID: 1726085318}
-  m_ContentType: 7
-  m_InputType: 2
+  m_ContentType: 0
+  m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
