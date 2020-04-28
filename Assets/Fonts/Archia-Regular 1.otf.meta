@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 0ab2c05f45e0f7f4eb8d52deaf6f6390
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Archia
+  fontNames:
+  - Archia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b0da79a5b4f8e7541b3435c8910aac1e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
