@@ -114,12 +114,6 @@ public class Title : MonoBehaviour
     public SaveLoad theSaveLoad;
     //public SaveLoad theSaveLoadDada;
 
-    public Text myText;
-    public Text idText;
-    public Text pwText;
-
-
-
     private void Awake()
     {
 
@@ -144,14 +138,6 @@ public class Title : MonoBehaviour
 
         //myText.GetComponent<Text>().text = idText.GetComponent<Text>().text;
         //Debug.Log(DatabaseEssential.DatabaseManager.instance.Count("member"));
-        Debug.Log(DatabaseEssential.DatabaseManager.instance.Login(idText.GetComponent<Text>().text, pwText.GetComponent<Text>().text));
-        if(DatabaseEssential.DatabaseManager.instance.Login(idText.GetComponent<Text>().text, pwText.GetComponent<Text>().text))
-        {
-            myText.GetComponent<Text>().text = DatabaseEssential.DatabaseManager.instance.GetUserInfo(idText.GetComponent<Text>().text)+"님 안녕하세요!.";
-        } else
-        {
-            myText.GetComponent<Text>().text = "로그인 실패";
-        }
     }
 
 
