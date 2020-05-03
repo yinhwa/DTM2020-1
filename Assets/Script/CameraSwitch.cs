@@ -6,7 +6,7 @@ public class CameraSwitch : MonoBehaviour {
 
     public GameObject cameraOne;
     public GameObject cameraTwo;
-    public GameObject cameraThree;
+ //   public GameObject cameraThree;
 
     AudioListener cameraOneAudioLis;
     AudioListener cameraTwoAudioLis;
@@ -19,7 +19,7 @@ public class CameraSwitch : MonoBehaviour {
         //Get Camera Listeners
         cameraOneAudioLis = cameraOne.GetComponent<AudioListener>();
         cameraTwoAudioLis = cameraTwo.GetComponent<AudioListener>();
-        cameraThreeAudioLis = cameraThree.GetComponent<AudioListener>();
+   //     cameraThreeAudioLis = cameraThree.GetComponent<AudioListener>();
 
 
         //Camera Position Set
@@ -77,8 +77,8 @@ public class CameraSwitch : MonoBehaviour {
             cameraTwoAudioLis.enabled = false;
             cameraTwo.SetActive(false);
 
-            cameraThreeAudioLis.enabled = false;
-            cameraThree.SetActive(false);
+            //cameraThreeAudioLis.enabled = false;
+            //cameraThree.SetActive(false);
         }
 
         //Set camera position 2
@@ -93,23 +93,23 @@ public class CameraSwitch : MonoBehaviour {
             cameraOneAudioLis.enabled = false;
             cameraOne.SetActive(false);
 
-            cameraThreeAudioLis.enabled = false;
-            cameraThree.SetActive(false);
+            //cameraThreeAudioLis.enabled = false;
+            //cameraThree.SetActive(false);
 
         }
 
-        if (camPosition == 2)
-        {
-            cameraThree.SetActive(true);
-            cameraThreeAudioLis.enabled = true;
+        //if (camposition == 2)
+        //{
+        //    camerathree.setactive(true);
+        //    camerathreeaudiolis.enabled = true;
 
-            cameraOneAudioLis.enabled = false;
-            cameraOne.SetActive(false);
+        //    cameraoneaudiolis.enabled = false;
+        //    cameraone.setactive(false);
 
-            cameraTwoAudioLis.enabled = false;
-            cameraTwo.SetActive(false);
+        //    cameratwoaudiolis.enabled = false;
+        //    cameratwo.setactive(false);
 
-        }
+        //}
 
     }
 }

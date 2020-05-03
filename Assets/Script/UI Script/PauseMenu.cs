@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public string sceneName = "GameTitle";
+    public string sceneName = "introCampus";
 
    [SerializeField]
-    private GameObject go_BaseUI=null;
+    private GameObject PauseMenuPanel=null;
 
     [SerializeField]
     private SaveLoad theSaveLoad=null;
@@ -20,26 +20,26 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!GameManager.isPause)
-                CallMenu();
+                CallPauseMenu();
             else
-                CloseMenu(); 
+                ClosePauseMenu(); 
         }
         
     }
 
-    private void CallMenu()
+    private void CallPauseMenu()
     {
         GameManager.isPause = true;
-        go_BaseUI.SetActive(true);
+        PauseMenuPanel.SetActive(true);
     
         Time.timeScale = 0f; //시간의 흐름 조정가능(timeScale), 0배속 처리
          
     }
 
-    private void CloseMenu()
+    private void ClosePauseMenu()
     {
         GameManager.isPause = false;
-        go_BaseUI.SetActive(false);
+        PauseMenuPanel.SetActive(false);
         Time.timeScale = 1f; //시간의 흐름 조정가능(timeScale), 정상속도 처리
     }
 
@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("세이브");
         theSaveLoad.SaveData(); //세이브데이터 호출
-        SceneManager.LoadScene("GameTitle");
+        SceneManager.LoadScene("introCampus");
     }
     public void ClickLoad()
     {

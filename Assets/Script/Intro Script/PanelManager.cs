@@ -5,16 +5,19 @@ using UnityEngine;
 public class PanelManager : MonoBehaviour
 
 {
-    public GameObject Panel1;
-    public GameObject Panel3;
+    public GameObject InfoPanel;
+    public GameObject LogInPanel;
+    public GameObject SignUpPanel; 
 
 
     public void OpenInfoPanel()
     {
-        if (Panel1 != null)
+        if (InfoPanel != null)
         {
-            bool isActive = Panel1.activeSelf;
-            Panel1.SetActive(!isActive);
+            bool isActive = InfoPanel.activeSelf;
+            InfoPanel.SetActive(!isActive);
+            LogInPanel.SetActive(false);
+            SignUpPanel.SetActive(false);
 
 
         }
@@ -22,12 +25,25 @@ public class PanelManager : MonoBehaviour
 
     public void OpenLogInPanel()
     {
-        if(Panel3 != null)
+        if(LogInPanel != null)
         {
-            bool isActive = Panel3.activeSelf;
-            Panel3.SetActive(!isActive);
-
+            bool isActive = LogInPanel.activeSelf;
+            LogInPanel.SetActive(!isActive);
+            InfoPanel.SetActive(false);
+            SignUpPanel.SetActive(false);
 
         }
     }
+    public void OpenSignUpPanel()
+    {
+        if(SignUpPanel != null)
+        {
+            bool isActive = SignUpPanel.activeSelf;
+            SignUpPanel.SetActive(!isActive);
+            InfoPanel.SetActive(false);
+            LogInPanel.SetActive(false);
+
+        }
+    }
+
 }

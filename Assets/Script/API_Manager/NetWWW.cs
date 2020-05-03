@@ -82,13 +82,25 @@ public class WebRegister : IWebData
 {
     public string id { get; set; }
     public string password { get; set; }
+    public string name { get; set; }
+    public string org { get; set; }
+    public string orgpos { get; set; }
 
-    public string URL() { return "Register.php"; }
+    public string URL() { return "Register2.php"; }
 
     public void Recv(JsonData JsonObject)
     {
-        NetWWW.INSTANCE().MessageBox("Register Success");
+        //NetWWW.INSTANCE().MessageBox("Register Success");
         Debug.Log("Register Success");
+
+        if (JsonObject["ResultCode2"].ToString() == "1")
+        {
+            NetWWW.INSTANCE().ChangeSignupPanel("회원가입 완료!");
+        }
+        else
+        {
+            NetWWW.INSTANCE().ChangeSignupPanel("중복된 이메일이 있습니다.");
+        }
     }
 }
 
@@ -171,9 +183,19 @@ public class NetWWW : MonoBehaviour
     // 접근 지정자 public.  Unity의 inspector에서 제어 가능
     public string id;
     public string password;
-    public Text idText;
-    public Text pwText;
-    public Text myText;
+
+    public Text loginMyText;
+    public Text loginIdText;
+    public InputField loginPwText;
+
+    public Text signupMyText;
+    public Text signupIdText;
+    public InputField signupPwText;
+    public InputField signupPwconText;
+    public Text signupNameText;
+    public Text signupOrgText;
+    public Text signupOrgposText;
+
 
     public string session { get; set; }
     public int accountno { get; set; }
@@ -474,16 +496,43 @@ public class NetWWW : MonoBehaviour
     {
         //INSTANCE()._szMsg = Message;
         //INSTANCE()._bMsgbox = true;
-        myText.GetComponent<Text>().text = Message;
+        loginMyText.GetComponent<Text>().text = Message;
     }
 
     public void ClickLogin()
     {
         WebLogin Login = new WebLogin();
 
-        Login.id = idText.GetComponent<Text>().text;
-        Login.password = pwText.GetComponent<Text>().text;
+        Login.id = loginIdText.GetComponent<Text>().text;
+        Login.password = loginPwText.text;
 
         NetWWW.INSTANCE().Send(Login, true);
+    }
+
+    public void ChangeSignupPanel(string Message)
+    {
+        //INSTANCE()._szMsg = Message;
+        //INSTANCE()._bMsgbox = true;
+        signupMyText.GetComponent<Text>().text = Message;
+    }
+
+    public void ClickSignup()
+    {
+        WebRegister Reg = new WebRegister();
+
+        Reg.id = signupIdText.GetComponent<Text>().text;
+        Reg.password = signupPwText.text;
+        Reg.name = signupNameText.GetComponent<Text>().text;
+        Reg.org = signupOrgText.GetComponent<Text>().text;
+        Reg.orgpos = signupOrgposText.GetComponent<Text>().text;
+
+        if(Reg.password.Equals(signupPwconText.text))
+        {
+            NetWWW.INSTANCE().Send(Reg, true);
+        } else
+        {
+            signupMyText.text = "비밀번호가 일치하지 않습니다.";
+        }
+        
     }
 }

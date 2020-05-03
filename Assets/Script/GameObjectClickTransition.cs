@@ -3,14 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameObjectClickTransition : MonoBehaviour
 {
-
+    public GameObject UpperMenu;
+    public GameObject InfoPanel;
+    public GameObject LogInPanel;
+    public GameObject SignUpPanel;
 
 
     // 학술문화관 건물 클릭 후 곧바로 LoadScene 불러오기
     private void OnMouseDown()
     {
+        UpperMenu.SetActive(false);
+        InfoPanel.SetActive(false);
+        LogInPanel.SetActive(false);
+        SignUpPanel.SetActive(false);
+
         SceneManager.LoadScene("CuratorMode");
     }
 
