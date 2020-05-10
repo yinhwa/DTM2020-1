@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!GameManager.isPause)
+            if (!GameManager_Curator.isPause)
                 CallPauseMenu();
             else
                 ClosePauseMenu(); 
@@ -29,7 +29,7 @@ public class PauseMenu : MonoBehaviour
 
     private void CallPauseMenu()
     {
-        GameManager.isPause = true;
+        GameManager_Curator.isPause = true;
         PauseMenuPanel.SetActive(true);
     
         Time.timeScale = 0f; //시간의 흐름 조정가능(timeScale), 0배속 처리
@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
 
     private void ClosePauseMenu()
     {
-        GameManager.isPause = false;
+        GameManager_Curator.isPause = false;
         PauseMenuPanel.SetActive(false);
         Time.timeScale = 1f; //시간의 흐름 조정가능(timeScale), 정상속도 처리
     }

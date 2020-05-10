@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager_Curator : MonoBehaviour
 {
 
     public static bool canPlayerMove = true; //플레이어 움직임 제어; 시작부터 움직일 수 있어야하므로 true;
@@ -31,6 +32,21 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        try
+        {
+            GameObject.Find("UserInfo").GetComponent<Text>().text = GameManager.Instance.user_name + " " + GameManager.Instance.user_org_pos + "님\n saved time: 0000.00.00 00:00";
+        } catch
+        {
+
+        }
+        try
+        {
+            GameObject.Find("UserInfo2").GetComponent<Text>().text = GameManager.Instance.user_name + " " + GameManager.Instance.user_org_pos + "'s collection";
+        } catch
+        {
+
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Tab)) // && !isPreviewActivated) //으로 처리하면 중복 생성 방지가능 
         {

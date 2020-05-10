@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     { // Update is called once per frame: 매프레임 마다 호출, 1초에 60회, 따라서 캐릭터 움직임은 이곳에서 구현
-        if (GameManager.canPlayerMove)
+        if (GameManager_Curator.canPlayerMove)
         {
             IsGround();
             TryJump();

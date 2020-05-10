@@ -1,17 +1,18 @@
 fileFormatVersion: 2
-guid: 658217574cc27ae43b016e16af32ebc7
+guid: 922c2d814b0e12b4e97fec4a17d64713
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 1
+  fontSize: 160
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: HangeulNuri
+  fontName: Archivo
   fontNames:
-  - HangeulNuri
-  fallbackFontReferences: []
+  - Archivo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 32f32332d573700449550adfdc039eab, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

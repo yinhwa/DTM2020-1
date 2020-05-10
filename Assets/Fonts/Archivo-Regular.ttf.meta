@@ -1,17 +1,20 @@
 fileFormatVersion: 2
-guid: b0da79a5b4f8e7541b3435c8910aac1e
+guid: d78115bce8c52f84485611c4b628df4b
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 160
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Archia
+  fontName: Archivo
   fontNames:
-  - Archia
-  fallbackFontReferences: []
+  - Archivo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 922c2d814b0e12b4e97fec4a17d64713, type: 3}
+  - {fileID: 12800000, guid: 32f32332d573700449550adfdc039eab, type: 3}
+  - {fileID: 12800000, guid: d327970783c87e04487aac969faa0a03, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

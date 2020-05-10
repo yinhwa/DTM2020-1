@@ -119,16 +119,16 @@ public class Title : MonoBehaviour
 
 
         //싱글턴singleton 확보
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(gameObject);
+        //}
+        //else if (instance != this)
+        //{
+        //    Destroy(this.gameObject);
+        //}
+        //DontDestroyOnLoad(gameObject);
 
     }
 
