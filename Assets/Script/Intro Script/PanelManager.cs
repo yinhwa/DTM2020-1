@@ -8,6 +8,8 @@ public class PanelManager : MonoBehaviour
     public GameObject InfoPanel;
     public GameObject LogInPanel;
     public GameObject SignUpPanel; 
+    public GameObject MyCurationPanel; 
+    public GameObject SharedCurationPanel; 
 
 
     public void OpenInfoPanel()
@@ -18,6 +20,8 @@ public class PanelManager : MonoBehaviour
             InfoPanel.SetActive(!isActive);
             LogInPanel.SetActive(false);
             SignUpPanel.SetActive(false);
+            MyCurationPanel.SetActive(false);
+
 
 
         }
@@ -31,6 +35,7 @@ public class PanelManager : MonoBehaviour
             LogInPanel.SetActive(!isActive);
             InfoPanel.SetActive(false);
             SignUpPanel.SetActive(false);
+            MyCurationPanel.SetActive(false);
 
         }
     }
@@ -42,6 +47,20 @@ public class PanelManager : MonoBehaviour
             SignUpPanel.SetActive(!isActive);
             InfoPanel.SetActive(false);
             LogInPanel.SetActive(false);
+            MyCurationPanel.SetActive(false);
+
+        }
+    }
+
+    public void OpenMyCurationPanel()
+    {
+        if (MyCurationPanel != null)
+        {
+            bool isActive = MyCurationPanel.activeSelf;
+            MyCurationPanel.SetActive(!isActive);
+            InfoPanel.SetActive(false);
+            LogInPanel.SetActive(false);
+            SignUpPanel.SetActive(false);
 
         }
     }
